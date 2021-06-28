@@ -1,0 +1,37 @@
+{
+  "name": "musician_guitar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braianbernatto/musician_guitar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/braianbernatto/musician_guitar/issues"
+  },
+  "homepage": "https://github.com/braianbernatto/musician_guitar#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "css-loader": "^5.2.6",
+    "postcss-loader": "^6.1.0",
+    "postcss-nested": "^5.0.5",
+    "postcss-simple-vars": "^6.0.3",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
