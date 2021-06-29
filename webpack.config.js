@@ -1,6 +1,6 @@
 const path = require("path")
 
-const postCSSPlugins = [require("postcss-simple-vars"), require("postcss-nested"), require("autoprefixer")]
+const postCSSPlugins = [require("postcss-import"), require("postcss-simple-vars"), require("postcss-nested"), require("autoprefixer")]
 
 module.exports = {
   entry: "./app/assets/scripts/app.js",
@@ -19,8 +19,6 @@ module.exports = {
           "style-loader",
           // Translates CSS into CommonJS
           "css-loader?url=false",
-          // Compiles Sass to CSS
-          "sass-loader",
           { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }
         ]
       }

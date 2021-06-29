@@ -1,0 +1,15 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: red;
+}
+
+$mainBlue: #2f5572;
+
+h1 {
+  color: $mainBlue;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
