@@ -1,0 +1,27 @@
+.gear-section {
+  display: block;
+  min-height: 500px;
+  width: 100%;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gear__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  svg,
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gear-blue {
+    fill: $mainBlue;
+  }
+}
