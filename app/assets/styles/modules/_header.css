@@ -1,0 +1,178 @@
+.site-header {
+  display: block;
+}
+.site-header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 3.125rem;
+  font-size: 0.5rem;
+
+  @mixin atSmall {
+    font-size: 0.8rem;
+  }
+
+  @mixin atMedium {
+    height: 6.25rem;
+    font-size: 1rem;
+  }
+
+  h1 {
+    color: $mainBlue;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0.125rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.3), 0px -0.25rem 0.625rem rgba(255, 255, 255, 0.3);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @mixin atSmall {
+      font-size: 2.5rem;
+    }
+
+    @mixin atMedium {
+      font-size: 3rem;
+      margin-bottom: 5px;
+    }
+
+    @mixin atLarge {
+      font-size: 4rem;
+    }
+  }
+}
+
+.site-header__menu {
+  margin-left: 2%;
+  margin-right: 2%;
+  .main-nav {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 5rem;
+
+    @mixin atSmall {
+      font-size: 1rem;
+    }
+
+    @mixin atMedium {
+      display: flex;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    @mixin atLarge {
+      font-size: 1rem;
+    }
+  }
+
+  ul {
+    max-width: 56.25rem;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-between;
+  }
+  li {
+    border-radius: 3.125rem;
+    background: $mainGray;
+    box-shadow: 5px 5px 20px #a9a9a9, -20px -20px 60px #e5e5e5;
+    padding: 0.625rem 1.6875rem;
+    margin-bottom: 0.625rem;
+
+    @mixin atLarge {
+      padding: 0.9375rem 2.5rem;
+    }
+
+    &:hover {
+      background: $mainGray-light;
+    }
+    &:active {
+      transform: translateY(1px);
+    }
+    &:hover a {
+      filter: brightness(190%);
+    }
+  }
+  a {
+    font-weight: 700;
+    color: $mainBlue;
+    text-decoration: none;
+    transition: filter 0.2s ease-out;
+  }
+}
+
+.notas {
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &-1 {
+    animation: orbit 25s linear infinite;
+    width: 30px;
+    fill: $Gray_svg;
+    @mixin atMedium {
+      width: 50px;
+    }
+  }
+  &-2 {
+    animation: orbit-2 20s linear infinite;
+    width: 20px;
+    fill: $Gray_svg;
+    @mixin atMedium {
+      width: 40px;
+    }
+  }
+  &-3 {
+    animation: orbit-3 20s linear infinite;
+    width: 20px;
+    fill: $Gray_svg;
+    @mixin atMedium {
+      width: 40px;
+    }
+  }
+}
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(200px) rotate(-180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+@keyframes orbit-2 {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(200px) rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(360deg);
+  }
+}
+@keyframes orbit-3 {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  40% {
+    transform: rotate(-120deg) translateX(200px) rotate(120deg);
+  }
+  70% {
+    transform: rotate(-240deg) translateX(200px) rotate(240deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(200px) rotate(360deg);
+  }
+}

@@ -1,0 +1,78 @@
+.about {
+  position: relative;
+  display: block;
+  max-width: 137.5rem;
+  overflow: hidden;
+  @mixin atExtraLarge {
+    display: flex;
+  }
+  &__container-round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @mixin atExtraLarge {
+      display: inline;
+    }
+    .about__image {
+      width: 300px;
+      height: 300px;
+      border: 5px solid $mainBlue-transparent;
+      border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+      object-fit: cover;
+      margin-top: 10px;
+
+      @mixin atSmall {
+        width: 500px;
+        height: 500px;
+        margin-top: 30px;
+      }
+
+      @mixin atMedium {
+        width: 500px;
+        height: 500px;
+        border: 10px solid $mainBlue-transparent;
+        margin-top: 0;
+      }
+
+      @mixin atExtraLarge {
+        width: 700px;
+        height: 700px;
+        border: 10px solid $mainBlue-transparent;
+      }
+    }
+  }
+  p {
+    z-index: -1;
+    align-self: center;
+    position: relative;
+    color: white;
+    line-height: 1rem;
+    word-spacing: 0.5rem;
+    font-size: 1rem;
+    text-shadow: 1px 0.5px $mainBlue;
+    text-align: justify;
+    top: -50px;
+    font-weight: 400;
+    padding: 50px 10px 10px 10px;
+    background-color: $mainBlue-transparent;
+    border-radius: 10px;
+
+    @mixin atMedium {
+      font-size: 1.3rem;
+      line-height: 2rem;
+      text-shadow: 2px 2px $mainBlue;
+    }
+    @mixin atExtraLarge {
+      top: 0;
+      max-width: 1064;
+      max-height: 708px;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 50px 50px 50px 125px;
+      border-radius: 0;
+      transform: translateX(-150px) skew(-20deg);
+    }
+    transition: all 0.5s linear;
+  }
+}
