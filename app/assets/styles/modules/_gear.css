@@ -1,6 +1,6 @@
 .gear-section {
   display: block;
-  max-height: 500px;
+  max-height: 200px;
   width: 100%;
 
   h3 {
@@ -10,7 +10,7 @@
 }
 .gear__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
   animation: floating 10s linear infinite;
@@ -43,7 +43,7 @@
 
     @mixin atMedium {
       width: 70px;
-      height: 70px;
+      height: 110px;
     }
   }
 

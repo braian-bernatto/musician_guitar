@@ -1,47 +1,79 @@
 .about {
   position: relative;
-  display: block;
-  max-width: 137.5rem;
-  overflow: hidden;
+  display: inline-block;
+  max-width: 2200px;
+
   @mixin atExtraLarge {
     display: flex;
   }
+
   &__container-round {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+
+    @mixin atSmall {
+      width: 500px;
+      height: 500px;
+      margin-top: 30px;
+      perspective: 700px;
+    }
+
+    @mixin atMedium {
+      margin-top: 0;
+    }
 
     @mixin atExtraLarge {
       display: inline;
+      width: 700px;
+      height: 700px;
+      perspective: 900px;
     }
-    .about__image {
-      width: 300px;
-      height: 300px;
-      border: 5px solid $mainBlue-transparent;
-      border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
-      object-fit: cover;
-      margin-top: 10px;
 
-      @mixin atSmall {
-        width: 500px;
-        height: 500px;
-        margin-top: 30px;
-      }
-
-      @mixin atMedium {
-        width: 500px;
-        height: 500px;
-        border: 10px solid $mainBlue-transparent;
-        margin-top: 0;
-      }
-
-      @mixin atExtraLarge {
-        width: 700px;
-        height: 700px;
-        border: 10px solid $mainBlue-transparent;
-      }
+    &:hover .about__content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
     }
   }
+
+  &__content {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  &__image {
+    width: 300px;
+    height: 300px;
+    border: 5px solid $mainBlue-transparent;
+    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+    object-fit: cover;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    @mixin atSmall {
+      width: 500px;
+      height: 500px;
+    }
+
+    @mixin atMedium {
+      border: 10px solid $mainBlue-transparent;
+    }
+
+    @mixin atExtraLarge {
+      width: 700px;
+      height: 700px;
+      border: 10px solid $mainBlue-transparent;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+
   p {
     z-index: -1;
     align-self: center;
@@ -57,6 +89,7 @@
     padding: 50px 10px 10px 10px;
     background-color: $mainBlue-transparent;
     border-radius: 10px;
+    transition: all 0.3s linear;
 
     @mixin atMedium {
       font-size: 1.3rem;
@@ -73,6 +106,5 @@
       border-radius: 0;
       transform: translateX(-150px) skew(-20deg);
     }
-    transition: all 0.5s linear;
   }
 }

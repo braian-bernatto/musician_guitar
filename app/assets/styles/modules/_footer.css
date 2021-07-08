@@ -4,22 +4,35 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  margin-bottom: 42px;
+  margin-top: 0.625rem;
+  margin-bottom: 2.625rem;
 }
 .social_media {
-  width: 100%;
+  width: 100vw;
   display: flex;
-  align-items: center;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: $mainBlue-transparent;
 
   position: fixed;
   bottom: 0;
-  width: 500px;
-  height: 40px;
-  border-radius: 4px;
+  height: 2.5rem;
+  border-radius: 0;
+
+  @mixin atSmall {
+    border-radius: 3.125rem 3.125rem 0 0;
+    max-width: 25rem;
+  }
+
+  a {
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 
   svg {
+    user-select: none;
     stroke: #ffff;
   }
 }

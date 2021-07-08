@@ -20,3 +20,9 @@ body {
     margin-right: 10%;
   }
 }
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
