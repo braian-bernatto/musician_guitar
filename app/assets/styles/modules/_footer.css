@@ -17,7 +17,7 @@
 
   position: fixed;
   bottom: 0;
-  height: 2.5rem;
+  height: 40px;
   border-radius: 0;
 
   @mixin atSmall {
@@ -34,5 +34,35 @@
   svg {
     user-select: none;
     stroke: #ffff;
+    transition: all 0.3s ease;
+  }
+}
+
+.up {
+  position: fixed;
+  bottom: 30px;
+  left: 2%;
+  transition: all 0.1s linear;
+
+  @mixin atSmall {
+    bottom: 0;
+  }
+
+  @mixin atExtraLarge {
+    left: 10%;
+  }
+
+  svg {
+    stroke: $mainBlue-transparent;
+    stroke-width: 2px;
+
+    @mixin atExtraLarge {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  &:active {
+    bottom: 40px;
   }
 }

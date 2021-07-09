@@ -103,6 +103,7 @@
     color: $mainBlue;
     text-decoration: none;
     transition: filter 0.2s ease-out;
+    outline: 0;
   }
 }
 
