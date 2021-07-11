@@ -1,0 +1,199 @@
+.work {
+  position: relative;
+  max-width: 2200px;
+
+  @mixin atExtraLarge {
+    display: flex;
+  }
+
+  &__container-round {
+    z-index: 1;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+
+    @mixin atSmall {
+      width: 500px;
+      height: 500px;
+      margin-top: 30px;
+      perspective: 700px;
+    }
+
+    @mixin atMedium {
+      margin-top: 0;
+    }
+
+    @mixin atExtraLarge {
+      display: inline;
+      width: 700px;
+      height: 700px;
+      perspective: 900px;
+    }
+
+    &:hover .work__content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+  }
+
+  &__content {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  &__image {
+    width: 300px;
+    height: 300px;
+    border: 5px solid $mainBlue-transparent;
+    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+    object-fit: cover;
+    user-select: none;
+    object-position: bottom;
+    -webkit-user-drag: none;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    @mixin atSmall {
+      width: 500px;
+      height: 500px;
+    }
+
+    @mixin atMedium {
+      border: 10px solid $mainBlue-transparent;
+    }
+
+    @mixin atExtraLarge {
+      width: 700px;
+      height: 700px;
+      border: 10px solid $mainBlue-transparent;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      object-position: center;
+    }
+  }
+
+  &__list {
+    position: relative;
+    color: $mainBlue;
+    word-spacing: 0.1rem;
+    text-shadow: 1px 0.5px $mainBlue;
+    text-align: justify;
+    top: -60px;
+    font-weight: 400;
+    padding: 50px 10px 10px 10px;
+    border-radius: 10px;
+
+    @mixin atMedium {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+    @mixin atExtraLarge {
+      top: 0;
+      max-width: 900px;
+      padding: 50px 50px 50px 125px;
+      border-radius: 0;
+      transform: translateX(-200px) skew(-20deg);
+    }
+
+    ul {
+      list-style-type: none;
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    justify-content: center;
+
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+
+    &__title {
+      background-color: #fff;
+      color: $mainBlue;
+      padding: 10px;
+      width: 100%;
+      border-radius: 2px;
+      margin: 0 1%;
+      transform: skew(-20deg);
+      font-weight: 500;
+
+      box-shadow: inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff;
+
+      @mixin atExtraLarge {
+        transform: skew(0);
+      }
+    }
+
+    &__text {
+      padding: 10px 15px;
+      font-weight: 300;
+      line-height: 1rem;
+      width: 100%;
+      height: 1px;
+      opacity: 0;
+      transition: height 0.3s linear;
+
+      @mixin atMedium {
+        line-height: 1.2rem;
+        font-weight: 500;
+      }
+    }
+
+    &__button {
+      text-decoration: none;
+      background: $mainGray;
+      border-radius: 3.125rem;
+      padding: 0.3125rem 0.8125rem;
+      box-shadow: 1px 1px 2px #a9a9a9;
+      color: $mainBlue;
+      font-weight: 500;
+      text-shadow: 0.3px 0.2px $mainBlue;
+      text-align: center;
+      width: 100%;
+      transition: height 0.3s linear, opacity -1s linear;
+      display: flex;
+      align-items: center;
+
+      opacity: 0;
+
+      @mixin atSmall {
+        width: auto;
+        padding: 0.625rem 1.6875rem;
+        font-weight: 700;
+      }
+    }
+
+    &:hover .work__item__text {
+      height: 80px;
+      opacity: 1;
+    }
+
+    &:hover .work__item__button {
+      height: 30px;
+      opacity: 1;
+
+      @mixin atMedium {
+        height: 52px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &:hover svg {
+      opacity: 0;
+    }
+  }
+}

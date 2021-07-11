@@ -4,5 +4,6 @@
 @import "base/_global.css";
 @import "modules/_header.css";
 @import "modules/_about.css";
+@import "modules/_work.css";
 @import "modules/_gear.css";
 @import "modules/_footer.css";
