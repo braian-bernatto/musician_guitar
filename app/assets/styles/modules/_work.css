@@ -2,9 +2,10 @@
   position: relative;
   max-width: 2200px;
 
-  @mixin atExtraLarge {
-    display: flex;
-    flex-wrap: wrap;
+  &__container {
+    @mixin atExtraLarge {
+      display: flex;
+    }
   }
 
   &__container-round {
