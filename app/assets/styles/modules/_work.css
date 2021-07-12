@@ -4,6 +4,7 @@
 
   @mixin atExtraLarge {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__container-round {
@@ -80,7 +81,7 @@
     position: relative;
     color: $mainBlue;
     word-spacing: 0.1rem;
-    text-shadow: 1px 0.5px $mainBlue;
+    text-shadow: 0.4px 0.4px gray;
     text-align: justify;
     top: -60px;
     font-weight: 400;
@@ -97,6 +98,8 @@
       padding: 50px 50px 50px 125px;
       border-radius: 0;
       transform: translateX(-200px) skew(-20deg);
+
+      text-shadow: 0px 0px gray;
     }
 
     ul {
@@ -107,10 +110,11 @@
 
   &__item {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px 10px;
+    align-items: center;
     justify-content: center;
 
     border-radius: 20px;
@@ -163,6 +167,7 @@
       transition: height 0.3s linear, opacity -1s linear;
       display: flex;
       align-items: center;
+      justify-content: center;
 
       opacity: 0;
 

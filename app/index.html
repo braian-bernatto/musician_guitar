@@ -132,20 +132,20 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         <nav class="main-nav">
           <div class="main-nav__toggle"></div>
           <ul>
-            <li><a href="#home" id="home">Home</a></li>
-            <li><a href="#about" id="about">About</a></li>
-            <li><a href="#services" id="services">Need help?</a></li>
-            <li><a href="#testimonials" id="testimonials-link">Testimonials</a></li>
-            <li><a href="#gear" id="gear">Gear</a></li>
-            <li><a href="#contact" id="contact">Contact</a></li>
+            <a href="#home" id="b_home"><li>Home</li></a>
+            <a href="#about" id="b_about"><li>About</li></a>
+            <a href="#work" id="b_work"><li>Need help?</li></a>
+            <a href="#videos" id="b_videos"><li>Videos</li></a>
+            <a href="#gear" id="b_gear"><li>Gear</li></a>
+            <a href="#contact" id="b_contact"><li>Contact</li></a>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- About section -->
-    <di class="wrapper">
-      <section class="about">
+    <div class="wrapper">
+      <section id="about" class="about">
         <div class="centered">
           <div class="about__container-round">
             <div class="about__content">
@@ -156,11 +156,12 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </div>
         <p>Hi! My name is Diego Bogarin, I have more than five years of experience recording guitar and bass professionally, appearing on bands alongside acclaimed musicians in the Rock/Metal genre such as Adrian Benegas (Tragul, Solo), Herbie Langhans (Avantasia, Firewind), Alex Holzwarth (Rhapsody), Ralf Sheepers (Primal Fear) and more. My main goal is to create guitar or bass parts that will serve the writer's vision and enhace the song, focusing on the technique, feel, groove and attitude the song needs to effectively tell it's story. My roots are in Classic Rock and Metal but I have branched out from there to Pop and Pop Rock and I'm open to record songs in new genres. I also have several years of experience editing guitars, bass, drums and vocal tracks, from quantizing to pitch correction or whatever your track needs, working with the best tools on the industry. Feel free to reach out with any questions- I'm looking forward to making some music with you!</p>
       </section>
-    </di v>
+    </div>
 
     <!-- work section -->
     <div class="wrapper">
-      <section class="work">
+      <section id="work" class="work">
+        <h3 class="section__title">Let's work together!</h3>
         <div class="centered">
           <div class="work__container-round">
             <div class="work__content">
@@ -233,6 +234,23 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
       </section>
     </div>
 
+    <!-- videos section -->
+    <div class="wrapper">
+      <section id="videos" class="videos">        
+        <h3 class="section__title">Videos</h3>
+        <div class="videos__list">
+          <iframe width="95%" height="315" src="https://www.youtube.com/embed/7ExpuyIztd8?playsinline=1&rel=0&modestbranding=1&showinfo=0&color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <div class="videos__instagram">
+            <iframe height="390px" src="https://www.instagram.com/p/CD4jC2qB2O3/embed" frameborder="0"></iframe>
+            <iframe height="390px"  src="https://www.instagram.com/p/CESS7GfBNow/embed" frameborder="0"></iframe>
+            <iframe height="470px"  src="https://www.instagram.com/p/CLo23rmBj0O/embed" frameborder="0"></iframe>
+         </div>
+        </div>
+      </section>
+    </div>
+
+
     <!-- Testimonials section
     <section class="">
       <div class="">
@@ -246,14 +264,14 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 
     <!-- Gear section -->
     <div class="wrapper">
-    <section class="gear-section">
-      <h3>Some of the main brands that I use for making the perfect sound</h3>
+    <section id="gear" class="gear">
+      <h3 class="section__title">Some of the main brands that I use for making the perfect sound</h3>
       <div class="gear__item">
         <!-- protools -->
         <div class="gear__item gear__item--purple-2">
-          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1000.000000pt" height="1000.000000pt" viewBox="0 0 1000.000000 1000.000000" preserveAspectRatio="xMidYMid meet">
+          <svg version="1.0"  xmlns="http://www.w3.org/2000/svg" width="1000.000000pt" height="1000.000000pt" viewBox="0 0 1000.000000 1000.000000" preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)" stroke="none">
-              <path
+              <path 
                 d="M4770 9393 c-36 -2 -137 -10 -225 -19 -1234 -121 -2384 -772 -3125
 -1769 -443 -596 -737 -1304 -839 -2020 -59 -420 -61 -846 -5 -1265 24 -180
 108 -569 141 -657 6 -15 -27 -24 -112 -32 l-71 -6 274 -620 c150 -341 276

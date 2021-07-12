@@ -1,0 +1,31 @@
+.videos {
+  position: relative;
+  max-width: 2200px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    iframe {
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px gray;
+    }
+  }
+}
+
+.videos__instagram {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2%;
+
+  iframe {
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+  }
+}

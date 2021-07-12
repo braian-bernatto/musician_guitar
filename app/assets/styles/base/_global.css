@@ -7,7 +7,7 @@
 html,
 body {
   min-height: 100vh;
-  overflow: auto;
+  min-width: 100vw;
 }
 
 html {
@@ -20,6 +20,7 @@ body {
 }
 
 .wrapper {
+  z-index: -15;
   margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
@@ -36,4 +37,28 @@ body {
 .centered {
   display: flex;
   justify-content: center;
+}
+
+.section__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $mainBlue-transparent;
+  color: #ffff;
+  min-height: 30px;
+  max-height: 50px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  word-spacing: 5px;
+  letter-spacing: 1.3px;
+  transform: skew(-20deg);
+  margin-left: 2%;
+  margin-right: 2%;
+
+  @mixin atMedium {
+    font-size: 1.3rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
