@@ -94,9 +94,6 @@
     &:active {
       transform: translateY(1px);
     }
-    &:hover a {
-      filter: brightness(190%);
-    }
   }
   a {
     font-weight: 700;
@@ -104,6 +101,9 @@
     text-decoration: none;
     transition: filter 0.2s ease-out;
     outline: 0;
+    &:hover {
+      color: $mainBlue-bright;
+    }
   }
 }
 

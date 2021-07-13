@@ -16,10 +16,10 @@
     perspective: 500px;
 
     @mixin atSmall {
-      width: 500px;
-      height: 500px;
+      width: 400px;
+      height: 400px;
       margin-top: 30px;
-      perspective: 700px;
+      perspective: 600px;
     }
 
     @mixin atMedium {
@@ -28,9 +28,9 @@
 
     @mixin atExtraLarge {
       display: inline;
-      width: 700px;
-      height: 700px;
-      perspective: 900px;
+      width: 500px;
+      height: 500px;
+      perspective: 700px;
     }
 
     &:hover .work__content {
@@ -58,8 +58,8 @@
     backface-visibility: hidden;
 
     @mixin atSmall {
-      width: 500px;
-      height: 500px;
+      width: 400px;
+      height: 400px;
     }
 
     @mixin atMedium {
@@ -67,8 +67,8 @@
     }
 
     @mixin atExtraLarge {
-      width: 700px;
-      height: 700px;
+      width: 500px;
+      height: 500px;
       border: 10px solid $mainBlue-transparent;
     }
 
@@ -95,7 +95,7 @@
     }
     @mixin atExtraLarge {
       top: 0;
-      max-width: 900px;
+      max-width: 700px;
       padding: 50px 50px 50px 125px;
       border-radius: 0;
       transform: translateX(-200px) skew(-20deg);
@@ -180,17 +180,13 @@
     }
 
     &:hover .work__item__text {
-      height: 80px;
+      height: 60px;
       opacity: 1;
     }
 
     &:hover .work__item__button {
       height: 30px;
       opacity: 1;
-
-      @mixin atMedium {
-        height: 52px;
-      }
     }
 
     svg {

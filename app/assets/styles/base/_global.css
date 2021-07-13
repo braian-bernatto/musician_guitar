@@ -7,7 +7,6 @@
 html,
 body {
   min-height: 100vh;
-  min-width: 100vw;
 }
 
 html {
@@ -53,12 +52,9 @@ body {
   word-spacing: 5px;
   letter-spacing: 1.3px;
   transform: skew(-20deg);
-  margin-left: 2%;
-  margin-right: 2%;
+  width: 100%;
 
   @mixin atMedium {
     font-size: 1.3rem;
-    margin-left: 10%;
-    margin-right: 10%;
   }
 }
