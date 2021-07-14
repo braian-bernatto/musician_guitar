@@ -1,5 +1,7 @@
 .videos {
   position: relative;
+  max-width: 2200px;
+  width: 100%;
 
   &__list {
     display: flex;

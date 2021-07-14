@@ -3,6 +3,7 @@
   max-width: 2200px;
   max-height: 200px;
   margin-top: 30px;
+  width: 100%;
 }
 .gear__item {
   display: flex;

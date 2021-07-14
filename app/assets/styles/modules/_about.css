@@ -3,7 +3,7 @@
   display: inline-block;
   max-width: 2200px;
 
-  @mixin atExtraLarge {
+  @mixin atLarge {
     display: flex;
   }
 
@@ -99,7 +99,7 @@
       line-height: 2rem;
       text-shadow: 2px 2px $mainBlue;
     }
-    @mixin atExtraLarge {
+    @mixin atLarge {
       top: 0;
       max-width: 1064;
       max-height: 708px;
