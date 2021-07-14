@@ -1,57 +1,96 @@
 .gear {
   position: relative;
   max-width: 2200px;
-  max-height: 200px;
   margin-top: 30px;
   width: 100%;
-}
-.gear__item {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  animation: floating 10s linear infinite;
+
+  &__item__container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas:
+      "gear__item-1 gear__item-6 gear__item-4 gear__item-3"
+      "gear__item-5 gear__item-2 gear__item-7 gear__item-8";
+
+    @mixin atLarge {
+      grid-template-columns: repeat(8, auto);
+      grid-template-rows: auto;
+      grid-template-areas: "gear__item-1 gear__item-6 gear__item-4 gear__item-3 gear__item-5 gear__item-2 gear__item-7 gear__item-8";
+    }
+  }
+
+  &__item {
+    animation: floating 10s linear infinite;
+
+    &-1 {
+      grid-area: gear__item-1;
+    }
+    &-2 {
+      grid-area: gear__item-2;
+    }
+    &-3 {
+      grid-area: gear__item-3;
+    }
+    &-4 {
+      grid-area: gear__item-4;
+    }
+    &-5 {
+      grid-area: gear__item-5;
+    }
+    &-6 {
+      grid-area: gear__item-6;
+    }
+    &-7 {
+      grid-area: gear__item-7;
+    }
+    &-8 {
+      grid-area: gear__item-8;
+    }
+
+    &--purple {
+      fill: #6d278e;
+    }
+
+    &--purple-2 {
+      fill: #7425e0;
+    }
+
+    &--gold {
+      fill: #ce9d41;
+    }
+
+    &--small svg {
+      width: 50px;
+      height: 50px;
+
+      @mixin atMedium {
+        width: 70px;
+        height: 110px;
+      }
+    }
+
+    &--medium svg {
+      width: 100px;
+      height: 100px;
+
+      @mixin atMedium {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
 
   svg {
     width: 70px;
     height: 70px;
-    margin-right: 10px;
 
     @mixin atMedium {
       width: 100px;
       height: 100px;
-    }
-  }
-
-  &--purple {
-    fill: #6d278e;
-  }
-
-  &--purple-2 {
-    fill: #7425e0;
-  }
-
-  &--gold {
-    fill: #ce9d41;
-  }
-
-  &--small svg {
-    width: 50px;
-    height: 50px;
-
-    @mixin atMedium {
-      width: 70px;
-      height: 110px;
-    }
-  }
-
-  &--medium svg {
-    width: 100px;
-    height: 100px;
-
-    @mixin atMedium {
-      width: 200px;
-      height: 200px;
     }
   }
 
