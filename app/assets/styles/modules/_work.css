@@ -139,7 +139,7 @@
 
       box-shadow: inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff;
 
-      @mixin atExtraLarge {
+      @mixin atLarge {
         transform: skew(0);
       }
     }

@@ -12,7 +12,7 @@
     <span id="top"></span>
     <header class="site-header">
       <div class="notas">
-        <svg class="notas-1" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        <svg width="20px" class="notas-1" version="1.0" xmlns="http://www.w3.org/2000/svg"
  viewBox="0 0 960.000000 1280.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>
@@ -31,7 +31,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 </g>
 </svg>
 
-    <svg class="notas-2" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.000000 1280.000000"
+    <svg class="notas-2" width="20px" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.000000 1280.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.15, written by Peter Selinger 2001-2017
@@ -73,7 +73,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 </g>
 </svg>
 
-<svg class="notas-3" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg3745" viewBox="0 0 52.13 97.301" version="1.0">
+<svg class="notas-3" width="20px" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg3745" viewBox="0 0 52.13 97.301" version="1.0">
   <g id="layer1" transform="translate(-382.51 -658)">
     <path id="path3743" d="m408.04 658c5.88 14.34 12.3 22.76 16.39 27.42 3.23 3.68 20.94 20.04 0.53 45.61 12.12-25.04 7.76-39.88-13.92-49.03v53c0.68 21.83-21.75 23.16-27.21 17.35-5.65-5.99 7.67-25.89 24.21-19.35v-75z" fill-rule="evenodd"/>
   </g>
@@ -608,6 +608,20 @@ m690 -488 c611 -75 1176 -277 1680 -599 989 -632 1654 -1666 1814 -2821 52
 
       </div>
 
+    <!-- contact-section -->
+    <div class="wrapper">
+      <section id="contact" class="contact">
+        <h3 class="section__title">Contact me</h3>
+        <div class="contact_container">
+          <form class="contact__form" id="contact__form" action="#contact" onsubmit="event.preventDefault()">
+            <input class="contact__form__input contact__form__input__name" type="text" placeholder="Name">
+            <input class="contact__form__input contact__form__input__email" type="email" placeholder="Email">
+              <textarea class="contact__form__input contact__form__input__message" placeholder="Your message goes here..." name="" id="" cols="30" rows="10"></textarea>
+            <input class="contact__form__input contact__form__input__button" type="submit" value="Send" readonly>
+          </form>
+        </div>
+      </section>
+    </div> 
 
     <script src="bundled.js"></script>
     <div class="wrapper">
