@@ -28,6 +28,15 @@
       left: 0;
       transform: translate(39px, 22px);
       transition: all 0.3s ease;
+      top: 0;
+    }
+
+    .name-label {
+      top: 30px;
+    }
+
+    .email-label {
+      top: 100px;
     }
 
     &__input {
