@@ -8,9 +8,7 @@ class Contact {
     this.events()
   }
 
-  events() {
-    this.form.addEventListener("submit", e => e.preventDefault())
-  }
+  events() {}
 }
 
 export default Contact
