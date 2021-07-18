@@ -97,7 +97,7 @@
 
     @mixin atMedium {
       line-height: 2rem;
-      text-shadow: 2px 2px $mainBlue;
+      text-shadow: 1px 1.5px $mainBlue;
     }
     @mixin atLarge {
       top: 0;

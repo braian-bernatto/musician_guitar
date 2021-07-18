@@ -129,10 +129,11 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         <h2>Guitar/ Bass /Editing</h2>
       </div>
       <div class="site-header__menu">
-        <nav class="main-nav">
-          <div class="main-nav__toggle"></div>
+        <div class="site-header__menu-icon">
+          <div class="site-header__menu-icon__middle"></div>
+        </div>
+        <nav class="site-header__menu-content">
           <ul>
-            <a href="#home" id="b_home"><li>Home</li></a>
             <a href="#about" id="b_about"><li>About</li></a>
             <a href="#work" id="b_work"><li>Need help?</li></a>
             <a href="#videos" id="b_videos"><li>Videos</li></a>
@@ -290,7 +291,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
             <li class="work__item">
               <span class="work__item__title">Electric Guitar</span>
               <p class="work__item__text">I can make the guitar to cry so feel free to get in touch!</p>
-              <a class="work__item__button" href="#">Contact</a>
+              <a class="work__item__button" href="#contact">Contact</a>
               <svg class="work__item__drop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="6 9 12 15 18 9" />
@@ -299,7 +300,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
             <li class="work__item">
               <span class="work__item__title">Electric Bass</span>
               <p class="work__item__text">I can make the Bass to cry too! so feel free to get in touch!</p>
-              <a class="work__item__button" href="#">Contact</a>
+              <a class="work__item__button" href="#contact">Contact</a>
               <svg class="work__item__drop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="6 9 12 15 18 9" />
@@ -309,7 +310,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
             <li class="work__item">
               <span class="work__item__title">Acoustic Guitar</span>
               <p class="work__item__text">If you want some cool acoustic sounds to set the public to moco tendido mode!</p>
-              <a class="work__item__button" href="#">Contact</a>
+              <a class="work__item__button" href="#contact">Contact</a>
               <svg class="work__item__drop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="6 9 12 15 18 9" />
@@ -319,7 +320,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
             <li class="work__item">
               <span class="work__item__title">Programmed drum</span>
               <p class="work__item__text">Pretty much everything you want but don't ask for dream theater stuff please...</p>
-              <a class="work__item__button" href="#">Contact</a>
+              <a class="work__item__button" href="#contact">Contact</a>
               <svg class="work__item__drop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="6 9 12 15 18 9" />
@@ -328,7 +329,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
             <li class="work__item">
               <span class="work__item__title">Time alignment</span>
               <p class="work__item__text">I can even travel in time with my protools skills!!!</p>
-              <a class="work__item__button" href="#">Contact</a>
+              <a class="work__item__button" href="#contact">Contact</a>
               <svg class="work__item__drop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="6 9 12 15 18 9" />
@@ -337,7 +338,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
             <li class="work__item">
               <span class="work__item__title">Vocal Tuning</span>
               <p class="work__item__text">Told you, protools is my bitch!!!</p>
-              <a class="work__item__button" href="#">Contact</a>
+              <a class="work__item__button" href="#contact">Contact</a>
               <svg class="work__item__drop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="6 9 12 15 18 9" />
@@ -840,14 +841,14 @@ m690 -488 c611 -75 1176 -277 1680 -599 989 -632 1654 -1666 1814 -2821 52
         <h3 class="section__title">Contact me</h3>
         <div class="contact_container">
           <form class="contact__form" id="contact__form" action="#contact" onsubmit="event.preventDefault()">
-            <span>
-              <input id="name" class="contact__form__input contact__form__input__name" type="text" required>
+            <div>
+              <input id="name" class="contact__form__input contact__form__input__name" type="text" placeholder=" " required>
               <label for="name">Name</label>
-            </span>
-            <span>
-              <input id="email" class="contact__form__input contact__form__input__email" type="email" required>
+            </div>
+            <div>
+              <input id="email" class="contact__form__input contact__form__input__email" placeholder=" " type="email" required>
               <label for="name">Email</label>
-            </span>
+            </div>
               <textarea class="contact__form__input contact__form__input__message" placeholder="Your message goes here..." name="" id="" cols="30" rows="10" required></textarea>
             <input class="contact__form__input contact__form__input__button" type="submit" value="Send" readonly>
           </form>
@@ -855,10 +856,9 @@ m690 -488 c611 -75 1176 -277 1680 -599 989 -632 1654 -1666 1814 -2821 52
       </section>
     </div> 
 
-    <script src="bundled.js"></script>
     <div class="wrapper">
       <footer class="footer">
-        <p><span class="site-footer__text">Diego Bogarin &copy; 2021</span></p>
+        <p><span class="site-footer__text">Diego Bogarin &copy;&nbsp;</p></span><span class="year"></span></p>
         
         <div class="social_media">
           <!-- instagram -->
@@ -896,9 +896,10 @@ m690 -488 c611 -75 1176 -277 1680 -599 989 -632 1654 -1666 1814 -2821 52
             <polyline points="7 17 12 12 17 17" />
           </svg>
         </a>
-
       </footer>
     </div>
+
+    <script src="bundled.js"></script>
   </body>
   </html>
   

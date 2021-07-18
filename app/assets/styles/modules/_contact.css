@@ -24,9 +24,9 @@
 
     label {
       position: absolute;
-      left: 0;
       font-weight: 500;
-      transform: translate(39px, 21px);
+      left: 0;
+      transform: translate(39px, 22px);
       transition: all 0.3s ease;
     }
 
@@ -53,7 +53,8 @@
       }
 
       &:focus ~ label,
-      &:valid ~ label {
+      &:valid ~ label,
+      &:not(:placeholder-shown) ~ label {
         transform: translate(39px, -10px);
         color: $mainBlue;
       }
@@ -62,6 +63,12 @@
         height: 150px;
         padding: 10px;
         resize: none;
+        color: gray;
+
+        &:focus,
+        &:valid {
+          color: $mainBlue;
+        }
       }
 
       &__button {

@@ -1,108 +1,197 @@
 .site-header {
   display: block;
-}
-.site-header__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 3.125rem;
-  font-size: 0.5rem;
 
-  @mixin atSmall {
-    font-size: 0.8rem;
-  }
-
-  @mixin atMedium {
-    height: 6.25rem;
-    font-size: 1rem;
-  }
-
-  h1 {
-    color: $mainBlue;
-    width: 100%;
-    text-align: center;
-    text-shadow: 0.125rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.3), 0px -0.25rem 0.625rem rgba(255, 255, 255, 0.3);
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @mixin atSmall {
-      font-size: 2.5rem;
-    }
-
-    @mixin atMedium {
-      font-size: 3rem;
-      margin-bottom: 5px;
-    }
-
-    @mixin atLarge {
-      font-size: 4rem;
-    }
-  }
-}
-
-.site-header__menu {
-  margin-left: 2%;
-  margin-right: 2%;
-  .main-nav {
-    display: none;
+  &__title {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 5rem;
+    height: 3.125rem;
+    font-size: 0.5rem;
 
     @mixin atSmall {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
 
     @mixin atMedium {
-      display: flex;
+      height: 6.25rem;
       font-size: 1rem;
+    }
+
+    h1 {
+      color: $mainBlue;
+      width: 100%;
+      text-align: center;
+      text-shadow: 0.125rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.3), 0px -0.25rem 0.625rem rgba(255, 255, 255, 0.3);
+      font-size: 2rem;
+      margin-top: 0;
       margin-bottom: 0;
-    }
 
-    @mixin atLarge {
-      font-size: 1rem;
+      @mixin atSmall {
+        font-size: 2.5rem;
+      }
+
+      @mixin atMedium {
+        font-size: 3rem;
+        margin-bottom: 5px;
+      }
+
+      @mixin atLarge {
+        font-size: 4rem;
+      }
     }
   }
 
-  ul {
-    max-width: 56.25rem;
-    display: flex;
-    flex: 1 1 auto;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: space-between;
-  }
-  li {
-    border-radius: 3.125rem;
-    background: $mainGray;
-    box-shadow: 5px 5px 20px #a9a9a9, -20px -20px 60px #e5e5e5;
-    padding: 0.625rem 1.6875rem;
-    margin-bottom: 0.625rem;
+  &__menu {
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 100%;
 
-    @mixin atLarge {
-      padding: 0.9375rem 2.5rem;
+    &-icon {
+      width: 20px;
+      height: 19px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        background-color: $mainBlue;
+        transform-origin: 0 0;
+        transition: transform 0.3s ease-out;
+      }
+
+      &__middle {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        background-color: $mainBlue;
+        transition: all 0.3s ease-out;
+        transform-origin: 0 50%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        background-color: $mainBlue;
+        transform-origin: 0 100%;
+        transition: transform 0.3s ease-out;
+      }
+
+      @mixin atMedium {
+        display: none;
+      }
     }
 
-    &:hover {
-      background: $mainGray-light;
+    &-icon--close-x {
+      &::before {
+        transform: rotate(45deg) scaleX(1.25);
+      }
+
+      .site-header__menu-icon__middle {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      &::after {
+        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+      }
     }
-    &:active {
-      transform: translateY(1px);
+
+    &-content {
+      z-index: -10;
+      transition: all 0.3s ease-out;
+      position: absolute;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      width: 100%;
+      top: -200px;
+      transform: scale(1.4);
+
+      @mixin atSmall {
+        font-size: 1rem;
+        z-index: 2;
+        margin-bottom: 0;
+        margin-top: 25px;
+      }
+
+      @mixin atMedium {
+        position: relative;
+        opacity: 1;
+        font-size: 1rem;
+        margin-bottom: 0;
+        margin-top: 10px;
+        top: 0;
+        transform: scale(1);
+      }
+
+      @mixin atLarge {
+        font-size: 1rem;
+        margin-top: 20px;
+      }
+
+      &--is-visible {
+        opacity: 1;
+        position: relative;
+        z-index: 2;
+        top: 0;
+        transform: scale(1);
+      }
     }
-  }
-  a {
-    font-weight: 700;
-    color: $mainBlue;
-    text-decoration: none;
-    transition: filter 0.2s ease-out;
-    outline: 0;
-    &:hover {
-      color: $mainBlue-bright;
+
+    ul {
+      max-width: 56.25rem;
+      display: flex;
+      flex: 1 1 auto;
+      flex-wrap: wrap;
+      list-style-type: none;
+      justify-content: space-between;
+    }
+
+    li {
+      border-radius: 3.125rem;
+      background: $mainGray;
+      box-shadow: 0px 0px 5px gray;
+      padding: 0.625rem 1.6875rem;
+      margin-bottom: 0.625rem;
+
+      @mixin atLarge {
+        padding: 0.9375rem 2.5rem;
+      }
+
+      &:hover {
+        background: $mainGray-light;
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+
+    a {
+      font-weight: 700;
+      color: $mainBlue;
+      text-decoration: none;
+      transition: filter 0.2s ease-out;
+      outline: 0;
+      &:hover {
+        color: $mainBlue-bright;
+      }
     }
   }
 }
