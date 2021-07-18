@@ -57,9 +57,14 @@
     stroke: $mainBlue-transparent;
     stroke-width: 2px;
 
-    @mixin atExtraLarge {
+    @mixin atSmall {
       height: 70px;
       width: 70px;
+    }
+
+    @mixin atLarge {
+      height: 90px;
+      width: 90px;
     }
   }
 
