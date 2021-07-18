@@ -1,8 +1,15 @@
 class Contact {
   constructor() {
-    this.name
-    this.email
-    this.message
+    this.form = document.querySelector("#contact__form")
+    this.name = document.querySelector("#name")
+    this.email = document.querySelector("#email")
+    this.message = document.querySelector("#message")
+    this.send = document.querySelector("#send")
+    this.events()
+  }
+
+  events() {
+    this.form.addEventListener("submit", e => e.preventDefault())
   }
 }
 

@@ -838,17 +838,20 @@ m690 -488 c611 -75 1176 -277 1680 -599 989 -632 1654 -1666 1814 -2821 52
         </div>
         <h3 class="section__title">Contact me</h3>
         <div class="contact_container">
-          <form class="contact__form" id="contact__form" action="#contact" onsubmit="event.preventDefault()">
+          <form id="contact__form" class="contact__form" action="POST" data-netlify="true">
             <div>
-              <input id="name" class="contact__form__input contact__form__input__name" type="text" placeholder=" " required>
+              <input id="name" name="name" class="contact__form__input contact__form__input__name" type="text" autocomplete="off" placeholder=" " required>
               <label for="name">Name</label>
             </div>
             <div>
-              <input id="email" class="contact__form__input contact__form__input__email" placeholder=" " type="email" required>
+              <input id="email" name="email" class="contact__form__input contact__form__input__email"  autocomplete="off" placeholder=" " type="email" required>
               <label for="name">Email</label>
             </div>
-              <textarea class="contact__form__input contact__form__input__message" placeholder="Your message goes here..." name="" id="" cols="30" rows="10" required></textarea>
-            <input class="contact__form__input contact__form__input__button" type="submit" value="Send" readonly>
+              <textarea id="message" name="message" class="contact__form__input contact__form__input__message" placeholder="Your message goes here..." cols="30" rows="10" required></textarea>
+            <input id="send" class="contact__form__input contact__form__input__button" type="submit" value="Send" readonly>
+            <div class="field">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
           </form>
         </div>
       </section>
@@ -897,7 +900,6 @@ m690 -488 c611 -75 1176 -277 1680 -599 989 -632 1654 -1666 1814 -2821 52
       </footer>
     </div>
 
-    <script src="bundled.js"></script>
   </body>
   </html>
   
