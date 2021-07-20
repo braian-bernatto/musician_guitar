@@ -55,6 +55,9 @@ body {
   letter-spacing: 1.3px;
   transform: skew(-20deg);
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 
   @mixin atMedium {
     font-size: 1.3rem;
