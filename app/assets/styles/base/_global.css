@@ -28,6 +28,12 @@ body {
   align-items: center;
   justify-content: center;
 
+  @mixin atMedium {
+    &:not(:last-child) {
+      margin-bottom: 10%;
+    }
+  }
+
   @mixin atExtraLarge {
     margin-left: 10%;
     margin-right: 10%;

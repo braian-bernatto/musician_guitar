@@ -1,0 +1,31 @@
+.songs {
+  position: relative;
+  max-width: 2200px;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 626px) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      column-gap: 10px;
+    }
+
+    @media (min-width: 942px) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    iframe {
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px gray;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
