@@ -32,6 +32,9 @@ body {
     &:not(:last-child) {
       margin-bottom: 10%;
     }
+    &--footer {
+      margin-bottom: 0;
+    }
   }
 
   @mixin atExtraLarge {
