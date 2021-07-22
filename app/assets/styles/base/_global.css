@@ -29,9 +29,8 @@ body {
   justify-content: center;
 
   @mixin atMedium {
-    &:not(:last-child) {
-      margin-bottom: 10%;
-    }
+    margin-bottom: 10%;
+
     &--footer {
       margin-bottom: 0;
     }
