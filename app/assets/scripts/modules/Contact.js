@@ -17,7 +17,7 @@ class Contact {
     this.message.innerHTML = `Hi Diego, I need help with ${text} stuff, can you help me?`
     setTimeout(() => {
       this.name.focus()
-    }, 300)
+    }, 1000)
   }
 }
 
