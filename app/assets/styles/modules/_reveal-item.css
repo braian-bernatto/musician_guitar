@@ -1,0 +1,15 @@
+.reveal-item {
+  opacity: 0;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+
+  &:not(h3) {
+    transform: scale(1.03);
+  }
+
+  &--is-visible {
+    opacity: 1;
+    &:not(h3) {
+      transform: scale(1);
+    }
+  }
+}
