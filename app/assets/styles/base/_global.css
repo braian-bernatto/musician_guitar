@@ -73,7 +73,7 @@ body {
 }
 
 .spin {
-  animation: spin 7s linear;
+  animation: spin 5s linear 1s;
 
   @keyframes spin {
     0% {

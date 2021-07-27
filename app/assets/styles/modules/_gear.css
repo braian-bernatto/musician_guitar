@@ -14,12 +14,15 @@
     row-gap: 10px;
     grid-template-areas:
       "gear__item-1 gear__item-6 gear__item-4 gear__item-3"
-      "gear__item-5 gear__item-2 gear__item-7 gear__item-8";
+      "gear__item-5 gear__item-2 gear__item-7 gear__item-8"
+      "gear__item-9 gear__item-10 . .";
 
-    @mixin atLarge {
-      grid-template-columns: repeat(8, auto);
+    @mixin atSmall {
+      grid-template-columns: repeat(5, auto);
       grid-template-rows: auto;
-      grid-template-areas: "gear__item-1 gear__item-6 gear__item-4 gear__item-3 gear__item-5 gear__item-2 gear__item-7 gear__item-8";
+      grid-template-areas:
+        "gear__item-1 gear__item-6 gear__item-4 gear__item-3 gear__item-5"
+        "gear__item-2 gear__item-7 gear__item-8 gear__item-9 gear__item-10";
     }
   }
 
@@ -49,6 +52,12 @@
     }
     &-8 {
       grid-area: gear__item-8;
+    }
+    &-9 {
+      grid-area: gear__item-9;
+    }
+    &-10 {
+      grid-area: gear__item-10;
     }
 
     &--purple {
