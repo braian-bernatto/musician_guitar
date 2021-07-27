@@ -69,11 +69,12 @@ body {
 
   @mixin atMedium {
     font-size: 1.3rem;
+    min-height: 50px;
   }
 }
 
 .spin {
-  animation: spin 5s linear 1s;
+  animation: spin 1.5s linear 2s;
 
   @keyframes spin {
     0% {
