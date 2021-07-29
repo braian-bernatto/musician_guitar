@@ -1,17 +1,16 @@
 .about {
   position: relative;
   display: inline-block;
-  max-width: 2200px;
+  max-width: 1600px;
 
   @mixin atLarge {
     display: flex;
+    margin: 90px 0;
   }
 
   &__container-round {
     position: relative;
-    margin-top: 10px;
     z-index: 1;
-
     width: 300px;
     height: 300px;
     perspective: 500px;
@@ -106,7 +105,7 @@
       line-height: 2rem;
       padding: 50px 50px 50px 125px;
       border-radius: 0;
-      transform: translateX(-140px) skew(-20deg);
+      transform: translateX(-130px) skew(-20deg);
     }
   }
 }

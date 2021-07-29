@@ -4,6 +4,75 @@
   margin-top: 30px;
   width: 100%;
 
+  &__container-round {
+    z-index: 1;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 500px;
+
+    @mixin atSmall {
+      width: 400px;
+      height: 400px;
+      perspective: 600px;
+    }
+
+    @mixin atMedium {
+      margin-top: 0;
+    }
+
+    @mixin atExtraLarge {
+      display: inline;
+      width: 500px;
+      height: 500px;
+      perspective: 700px;
+    }
+
+    &:hover .work__content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+  }
+
+  &__content {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  &__image {
+    width: 300px;
+    height: 300px;
+    border: 5px solid $mainBlue-transparent;
+    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+    object-fit: cover;
+    user-select: none;
+    object-position: bottom;
+    -webkit-user-drag: none;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    @mixin atSmall {
+      width: 400px;
+      height: 400px;
+    }
+
+    @mixin atMedium {
+      border: 10px solid $mainBlue-transparent;
+    }
+
+    @mixin atExtraLarge {
+      width: 500px;
+      height: 500px;
+      border: 10px solid $mainBlue-transparent;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      object-position: center;
+    }
+  }
+
   &__item__container {
     display: grid;
     grid-template-columns: repeat(4, auto);

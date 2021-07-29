@@ -45,6 +45,7 @@ body {
 .centered {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .section__title {
@@ -86,5 +87,9 @@ body {
     100% {
       transform: rotateY(360deg);
     }
+  }
+
+  &--infinite {
+    animation: spin 10s linear infinite;
   }
 }
