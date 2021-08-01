@@ -10,15 +10,17 @@
     width: 300px;
     height: 300px;
     perspective: 500px;
+    margin-top: 10px;
 
     @mixin atSmall {
       width: 400px;
       height: 400px;
       perspective: 600px;
+      margin-top: 25px;
     }
 
     @mixin atMedium {
-      margin-top: 0;
+      margin-top: 30px;
     }
 
     @mixin atExtraLarge {
@@ -26,6 +28,7 @@
       width: 500px;
       height: 500px;
       perspective: 700px;
+      margin-top: 50px;
     }
 
     &:hover .work__content {

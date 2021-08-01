@@ -8,13 +8,13 @@ class Contact {
 
   events() {
     this.items.forEach(item => {
-      let text = item.querySelector(".work__item__title").innerHTML
-      item.querySelector(".work__item__button").addEventListener("click", () => this.InsertText(text))
+      let workItem = item.querySelector(".work__item__title").innerHTML
+      item.querySelector(".work__item__button").addEventListener("click", () => this.InsertText(workItem))
     })
   }
 
-  InsertText(text) {
-    this.message.innerHTML = `Hi Diego, I need help with ${text} stuff, can you help me?`
+  InsertText(workItem) {
+    this.message.value = `Hi Diego, I need help with ${workItem} stuff, can you help me?`
     setTimeout(() => {
       this.name.focus()
     }, 1000)
