@@ -7,22 +7,25 @@ class RevealOnScroll {
     this.browserHeight = window.innerHeight
     this.hideInitially()
     this.scrollThrottle = throttle(this.calcCaller, 200).bind(this)
+
+    this.upButton = document.querySelector(".up")
+    this.scrollThrottle2 = throttle(this.checkTop, 200).bind(this)
+
     this.events()
   }
 
   events() {
     window.addEventListener("scroll", this.scrollThrottle)
+    window.addEventListener("scroll", this.scrollThrottle2)
     window.addEventListener(
       "resize",
       debounce(() => {
-        console.log("resize jus ran")
         this.browserHeight = window.innerHeight
       }, 333)
     )
   }
 
   calcCaller() {
-    console.log("scroll run")
     this.itemsToReveal.forEach(el => {
       if (el.isRevealed == false) {
         this.calculateIfScrolledTo(el)
@@ -32,7 +35,6 @@ class RevealOnScroll {
 
   calculateIfScrolledTo(el) {
     if (window.scrollY + this.browserHeight > el.offsetTop) {
-      console.log("element was calculated")
       let scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100
       if (scrollPercent < 75) {
         el.classList.add("reveal-item--is-visible")
@@ -41,6 +43,15 @@ class RevealOnScroll {
           window.removeEventListener("scroll", this.scrollThrottle)
         }
       }
+    }
+  }
+
+  checkTop() {
+    console.log("entro en checktop")
+    if (window.scrollY == 0) {
+      this.upButton.classList.add("up--down")
+    } else {
+      this.upButton.classList.remove("up--down")
     }
   }
 
