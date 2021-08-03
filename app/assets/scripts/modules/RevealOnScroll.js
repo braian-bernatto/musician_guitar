@@ -3,6 +3,7 @@ import debounce from "lodash/debounce"
 
 class RevealOnScroll {
   constructor() {
+    this.work_section = document.querySelector(".work")
     this.itemsToReveal = document.querySelectorAll(".reveal")
     this.browserHeight = window.innerHeight
     this.hideInitially()
@@ -24,6 +25,8 @@ class RevealOnScroll {
         this.browserHeight = window.innerHeight
       }, 333)
     )
+
+    this.work_section.visible = false
   }
 
   calcCaller() {
@@ -50,6 +53,10 @@ class RevealOnScroll {
   checkTop() {
     if (window.scrollY == 0) {
       this.upButton.classList.add("up--down")
+      console.log("entro en if visible")
+      if (this.work_section.visible == false) {
+        this.work_section.classList.add("visible")
+      }
     } else {
       this.upButton.classList.remove("up--down")
     }
