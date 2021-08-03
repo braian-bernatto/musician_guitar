@@ -12,6 +12,7 @@ class RevealOnScroll {
     this.scrollThrottle2 = throttle(this.checkTop, 200).bind(this)
 
     this.events()
+    this.checkTop()
   }
 
   events() {
@@ -47,7 +48,6 @@ class RevealOnScroll {
   }
 
   checkTop() {
-    console.log("entro en checktop")
     if (window.scrollY == 0) {
       this.upButton.classList.add("up--down")
     } else {
