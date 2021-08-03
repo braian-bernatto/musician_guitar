@@ -39,6 +39,11 @@ class RevealOnScroll {
 
   calculateIfScrolledTo(el) {
     if (window.scrollY + this.browserHeight > el.offsetTop) {
+      if (this.work_section.visible == false) {
+        this.work_section.classList.add("visible")
+        this.work_section.visible = true
+      }
+
       let scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100
       if (scrollPercent < 75) {
         el.classList.add("reveal-item--is-visible")
@@ -53,10 +58,6 @@ class RevealOnScroll {
   checkTop() {
     if (window.scrollY == 0) {
       this.upButton.classList.add("up--down")
-      console.log("entro en if visible")
-      if (this.work_section.visible == false) {
-        this.work_section.classList.add("visible")
-      }
     } else {
       this.upButton.classList.remove("up--down")
     }
