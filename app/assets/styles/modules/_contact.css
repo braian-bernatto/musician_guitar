@@ -85,6 +85,7 @@
         background-color: $Gray_svg;
         cursor: pointer;
         text-align: center;
+        margin-top: 10px;
 
         &:active {
           transform: translate(1px, 4px);
